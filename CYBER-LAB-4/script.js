@@ -1,15 +1,11 @@
 function showMessage() {
-    alert("CYBER LAB 4 лабораторид тавтай морил! Лаборатори удахгүй нээгдэнэ.");
+    alert("CYBER LAB 4 лабораторид тавтай морил!");
+}
+
+function openLab(labName) {
+    alert(labName + " хэсэгт тавтай морил! Удахгүй дадлагын материалууд нэмэгдэнэ.");
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-    console.log("CYBER LAB 4 website loaded successfully!");
-
-    const secondaryButton = document.querySelector(".secondary");
-
-    secondaryButton.addEventListener("click", function () {
-        document.querySelector(".cards").scrollIntoView({
-            behavior: "smooth"
-        });
-    });
+    console.log("CYBER LAB 4 successfully loaded!");
 });

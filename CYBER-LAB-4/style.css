@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: "Segoe UI", Arial, sans-serif;
     background: #07111f;
@@ -17,12 +21,13 @@ header {
     align-items: center;
     padding: 25px 8%;
     border-bottom: 1px solid #1e3045;
+    background: #091525;
 }
 
 .logo {
     font-size: 25px;
     font-weight: bold;
-    color: #ffffff;
+    color: white;
     letter-spacing: 2px;
 }
 
@@ -32,7 +37,8 @@ header {
 
 nav {
     display: flex;
-    gap: 30px;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
 nav a {
@@ -171,6 +177,7 @@ button.secondary {
     padding: 30px;
     border-radius: 15px;
     transition: 0.3s;
+    scroll-margin-top: 30px;
 }
 
 .card:hover {
@@ -194,6 +201,53 @@ button.secondary {
     font-size: 14px;
 }
 
+.card button {
+    margin-top: 20px;
+    width: 100%;
+}
+
+.team-section {
+    padding: 70px 8%;
+    text-align: center;
+}
+
+.team-section h2 {
+    font-size: 32px;
+    margin: 20px 0 35px;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.team-card {
+    background: #101e30;
+    border: 1px solid #1e354d;
+    padding: 35px 15px;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.team-card:hover {
+    border-color: #00e5a8;
+    transform: translateY(-5px);
+}
+
+.team-card h3 {
+    color: #00e5a8;
+    margin-bottom: 12px;
+}
+
+.team-card p {
+    color: #a9bbd0;
+}
+
+section, main {
+    scroll-margin-top: 30px;
+}
+
 footer {
     text-align: center;
     padding: 30px;
@@ -202,8 +256,6 @@ footer {
     letter-spacing: 2px;
     font-size: 12px;
 }
-
-/* Responsive design */
 
 @media (max-width: 1000px) {
     .hero {
@@ -216,32 +268,27 @@ footer {
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
     header {
         flex-direction: column;
         gap: 20px;
     }
 
-    nav {
-        gap: 15px;
-        flex-wrap: wrap;
-        justify-content: center;
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
+}
 
+@media (max-width: 600px) {
     .hero h1 {
         font-size: 48px;
-    }
-
-    .hero {
-        padding-top: 60px;
-        padding-bottom: 60px;
     }
 
     .status-card {
         width: 100%;
     }
 
-    .cards {
+    .cards, .team-grid {
         grid-template-columns: 1fr;
     }
 }

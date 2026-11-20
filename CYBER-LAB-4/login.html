@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CYBER LAB 4 | Admin Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<main class="login-container">
+    <h1>CYBER<span>LAB</span>4</h1>
+    <h2>Admin нэвтрэх</h2>
+
+    <form id="loginForm">
+        <label for="username">Username</label>
+        <input id="username" type="text" required
+               placeholder="Username">
+
+        <label for="password">Password</label>
+        <input id="password" type="password" required
+               placeholder="Password">
+
+        <button type="submit">Нэвтрэх</button>
+        <p id="loginMessage"></p>
+    </form>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="supabase.js"></script>
+<script src="login.js"></script>
+</body>
+</html>
